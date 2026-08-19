@@ -1,0 +1,455 @@
+{
+  "version": "2026-07-31-v2",
+  "companyCap": 5,
+  "selectionPolicy": {
+    "purpose": "台灣職缺一次性市場觀察的 30 家影響力公司母體",
+    "listedSources": [
+      "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
+    ],
+    "listedSelection": "保留半導體、電子、金融、電信平台、軟體與民生產業中具影響力且可能有數位人才需求的公司",
+    "additionalSelection": "納入在台設有團隊、具工程影響力，且部分可由公開 ATS 全量列舉的外商與私有公司",
+    "rule": "所有原始命中職缺先保存；分析樣本再依相關性排序，且每家公司最多納入五筆"
+  },
+  "companies": [
+    {
+      "id": "twse-2330",
+      "displayName": "TSMC",
+      "nameZh": "台積電",
+      "aliases": ["台灣積體電路製造", "TSMC"],
+      "market": "TWSE",
+      "stockCode": "2330",
+      "industryGroup": "半導體／IC 設計",
+      "segment": "晶圓代工",
+      "priority": "focus",
+      "careersUrl": "https://careers.tsmc.com/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2303",
+      "displayName": "UMC",
+      "nameZh": "聯電",
+      "aliases": ["聯華電子", "UMC"],
+      "market": "TWSE",
+      "stockCode": "2303",
+      "industryGroup": "半導體／IC 設計",
+      "segment": "晶圓代工",
+      "priority": "focus",
+      "careersUrl": "https://careers.umc.com/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2454",
+      "displayName": "MediaTek",
+      "nameZh": "聯發科",
+      "aliases": ["聯發科技", "MediaTek"],
+      "market": "TWSE",
+      "stockCode": "2454",
+      "industryGroup": "半導體／IC 設計",
+      "segment": "IC 設計",
+      "priority": "focus",
+      "careersUrl": "https://careers.mediatek.com/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-3711",
+      "displayName": "ASE Technology Holding",
+      "nameZh": "日月光投控",
+      "aliases": ["日月光", "ASE", "ASEH"],
+      "market": "TWSE",
+      "stockCode": "3711",
+      "industryGroup": "半導體／IC 設計",
+      "segment": "封裝測試",
+      "priority": "focus",
+      "careersUrl": "https://www.aseglobal.com/careers",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2379",
+      "displayName": "Realtek",
+      "nameZh": "瑞昱",
+      "aliases": ["瑞昱半導體", "Realtek"],
+      "market": "TWSE",
+      "stockCode": "2379",
+      "industryGroup": "半導體／IC 設計",
+      "segment": "IC 設計",
+      "priority": "focus",
+      "careersUrl": "https://www.realtek.com/Employment",
+      "careerSources": []
+    },
+    {
+      "id": "twse-3034",
+      "displayName": "Novatek",
+      "nameZh": "聯詠",
+      "aliases": ["聯詠科技", "Novatek"],
+      "market": "TWSE",
+      "stockCode": "3034",
+      "industryGroup": "半導體／IC 設計",
+      "segment": "IC 設計",
+      "priority": "focus",
+      "careersUrl": "https://www.novatek.com.tw/zh-TW/careers",
+      "careerSources": []
+    },
+    {
+      "id": "tpex-8299",
+      "displayName": "Phison",
+      "nameZh": "群聯",
+      "aliases": ["群聯電子", "Phison"],
+      "market": "TPEx",
+      "stockCode": "8299",
+      "industryGroup": "半導體／IC 設計",
+      "segment": "儲存控制晶片",
+      "priority": "focus",
+      "careersUrl": "https://www.phison.com/zh-tw/about/careers",
+      "careerSources": []
+    },
+    {
+      "id": "foreign-nvidia-taiwan",
+      "displayName": "NVIDIA Taiwan",
+      "nameZh": "輝達台灣",
+      "aliases": ["NVIDIA", "NVIDIA Taiwan", "台灣輝達"],
+      "market": "foreign-subsidiary",
+      "stockCode": null,
+      "industryGroup": "半導體／IC 設計",
+      "segment": "GPU／AI 運算",
+      "priority": "focus",
+      "careersUrl": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
+      "careerSources": [
+        {
+          "id": "nvidia-workday",
+          "provider": "workday",
+          "endpoint": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "foreign-micron-taiwan",
+      "displayName": "Micron Taiwan",
+      "nameZh": "台灣美光",
+      "aliases": ["Micron", "Micron Taiwan", "台灣美光晶圓科技"],
+      "market": "foreign-subsidiary",
+      "stockCode": null,
+      "industryGroup": "半導體／IC 設計",
+      "segment": "記憶體",
+      "priority": "focus",
+      "careersUrl": "https://micron.wd1.myworkdayjobs.com/External",
+      "careerSources": [
+        {
+          "id": "micron-workday",
+          "provider": "workday",
+          "endpoint": "https://micron.wd1.myworkdayjobs.com/wday/cxs/micron/External",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "foreign-asml-taiwan",
+      "displayName": "ASML Taiwan",
+      "nameZh": "台灣艾司摩爾",
+      "aliases": ["ASML", "ASML Taiwan", "艾司摩爾"],
+      "market": "foreign-subsidiary",
+      "stockCode": null,
+      "industryGroup": "半導體／IC 設計",
+      "segment": "半導體設備",
+      "priority": "focus",
+      "careersUrl": "https://www.asml.com/en/careers/find-your-job",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2317",
+      "displayName": "Hon Hai",
+      "nameZh": "鴻海",
+      "aliases": ["鴻海精密", "Foxconn", "Hon Hai"],
+      "market": "TWSE",
+      "stockCode": "2317",
+      "industryGroup": "電子硬體／網通／IoT",
+      "segment": "電子製造",
+      "priority": "core",
+      "careersUrl": "https://recruit.foxconn.com/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2382",
+      "displayName": "Quanta",
+      "nameZh": "廣達",
+      "aliases": ["廣達電腦", "Quanta"],
+      "market": "TWSE",
+      "stockCode": "2382",
+      "industryGroup": "電子硬體／網通／IoT",
+      "segment": "伺服器／電子製造",
+      "priority": "core",
+      "careersUrl": "https://hr.quantatw.com/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-3231",
+      "displayName": "Wistron",
+      "nameZh": "緯創",
+      "aliases": ["緯創資通", "Wistron"],
+      "market": "TWSE",
+      "stockCode": "3231",
+      "industryGroup": "電子硬體／網通／IoT",
+      "segment": "電子製造",
+      "priority": "core",
+      "careersUrl": "https://careers.wistron.com/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2308",
+      "displayName": "Delta Electronics",
+      "nameZh": "台達電",
+      "aliases": ["台達電子", "Delta", "Delta Electronics"],
+      "market": "TWSE",
+      "stockCode": "2308",
+      "industryGroup": "電子硬體／網通／IoT",
+      "segment": "電源／自動化",
+      "priority": "core",
+      "careersUrl": "https://careers.deltaww.com/",
+      "careerSources": []
+    },
+    {
+      "id": "foreign-ubiquiti-taiwan",
+      "displayName": "Ubiquiti",
+      "nameZh": "Ubiquiti",
+      "aliases": ["Ubiquiti Inc.", "UI.com"],
+      "market": "foreign-subsidiary",
+      "stockCode": null,
+      "industryGroup": "電子硬體／網通／IoT",
+      "segment": "網路設備",
+      "priority": "focus",
+      "careersUrl": "https://job-boards.greenhouse.io/ubiquiti",
+      "careerSources": [
+        {
+          "id": "ubiquiti-greenhouse",
+          "provider": "greenhouse",
+          "boardToken": "ubiquiti",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "twse-2882",
+      "displayName": "Cathay Financial Holdings",
+      "nameZh": "國泰金",
+      "aliases": ["國泰金融控股", "國泰世華", "Cathay Financial"],
+      "market": "TWSE",
+      "stockCode": "2882",
+      "industryGroup": "金融／金融科技",
+      "segment": "金融控股",
+      "priority": "core",
+      "careersUrl": "https://www.cathayholdings.com/careers",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2881",
+      "displayName": "Fubon Financial Holdings",
+      "nameZh": "富邦金",
+      "aliases": ["富邦金融控股", "台北富邦", "Fubon Financial"],
+      "market": "TWSE",
+      "stockCode": "2881",
+      "industryGroup": "金融／金融科技",
+      "segment": "金融控股",
+      "priority": "core",
+      "careersUrl": "https://www.fubon.com/financialholdings/hr/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2891",
+      "displayName": "CTBC Financial Holding",
+      "nameZh": "中信金",
+      "aliases": ["中國信託", "中信金融控股", "CTBC"],
+      "market": "TWSE",
+      "stockCode": "2891",
+      "industryGroup": "金融／金融科技",
+      "segment": "金融控股",
+      "priority": "core",
+      "careersUrl": "https://www.ctbcholding.com/content/twhoo/zh_tw/careers.html",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2884",
+      "displayName": "E.SUN Financial Holding",
+      "nameZh": "玉山金",
+      "aliases": ["玉山銀行", "玉山金融控股", "E.SUN"],
+      "market": "TWSE",
+      "stockCode": "2884",
+      "industryGroup": "金融／金融科技",
+      "segment": "金融控股",
+      "priority": "core",
+      "careersUrl": "https://hr.esunfhc.com/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-2412",
+      "displayName": "Chunghwa Telecom",
+      "nameZh": "中華電",
+      "aliases": ["中華電信", "Chunghwa Telecom", "CHT"],
+      "market": "TWSE",
+      "stockCode": "2412",
+      "industryGroup": "電信／電商／網路平台",
+      "segment": "電信",
+      "priority": "core",
+      "careersUrl": "https://rmis.cht.com.tw/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-3045",
+      "displayName": "Taiwan Mobile",
+      "nameZh": "台灣大",
+      "aliases": ["台灣大哥大", "Taiwan Mobile", "TWM"],
+      "market": "TWSE",
+      "stockCode": "3045",
+      "industryGroup": "電信／電商／網路平台",
+      "segment": "電信",
+      "priority": "core",
+      "careersUrl": "https://corp.taiwanmobile.com/careers/",
+      "careerSources": []
+    },
+    {
+      "id": "twse-8454",
+      "displayName": "momo",
+      "nameZh": "富邦媒",
+      "aliases": ["富邦媒體科技", "momo購物網", "momo"],
+      "market": "TWSE",
+      "stockCode": "8454",
+      "industryGroup": "電信／電商／網路平台",
+      "segment": "電商",
+      "priority": "core",
+      "careersUrl": "https://corp.momo.com.tw/careers",
+      "careerSources": []
+    },
+    {
+      "id": "foreign-line-taiwan",
+      "displayName": "LINE Taiwan",
+      "nameZh": "LINE Taiwan",
+      "aliases": ["LINE台灣", "LINE Plus Taiwan"],
+      "market": "foreign-subsidiary",
+      "stockCode": null,
+      "industryGroup": "電信／電商／網路平台",
+      "segment": "通訊／網路服務",
+      "priority": "focus",
+      "careersUrl": "https://careers.linecorp.com/",
+      "careerSources": []
+    },
+    {
+      "id": "overseas-trend-micro",
+      "displayName": "Trend Micro",
+      "nameZh": "趨勢科技",
+      "aliases": ["Trend Micro", "趨勢"],
+      "market": "overseas-listed",
+      "stockCode": null,
+      "industryGroup": "軟體／AI／資安",
+      "segment": "資安",
+      "priority": "focus",
+      "careersUrl": "https://trendmicro.wd3.myworkdayjobs.com/External",
+      "careerSources": [
+        {
+          "id": "trendmicro-workday",
+          "provider": "workday",
+          "endpoint": "https://trendmicro.wd3.myworkdayjobs.com/wday/cxs/trendmicro/External",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "overseas-appier",
+      "displayName": "Appier",
+      "nameZh": "沛星",
+      "aliases": ["Appier", "沛星互動科技"],
+      "market": "overseas-listed",
+      "stockCode": null,
+      "industryGroup": "軟體／AI／資安",
+      "segment": "AI／MarTech",
+      "priority": "focus",
+      "careersUrl": "https://job-boards.greenhouse.io/appier",
+      "careerSources": [
+        {
+          "id": "appier-greenhouse",
+          "provider": "greenhouse",
+          "boardToken": "appier",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "twse-6902",
+      "displayName": "Gogolook",
+      "nameZh": "走著瞧",
+      "aliases": ["Gogolook", "Whoscall", "走著瞧股份有限公司"],
+      "market": "TWSE",
+      "stockCode": "6902",
+      "industryGroup": "軟體／AI／資安",
+      "segment": "信任科技／防詐",
+      "priority": "focus",
+      "careersUrl": "https://gogolook.com/careers",
+      "careerSources": []
+    },
+    {
+      "id": "private-binance",
+      "displayName": "Binance",
+      "nameZh": "幣安",
+      "aliases": ["Binance", "幣安"],
+      "market": "private",
+      "stockCode": null,
+      "industryGroup": "軟體／AI／資安",
+      "segment": "金融科技／區塊鏈",
+      "priority": "focus",
+      "careersUrl": "https://jobs.lever.co/binance",
+      "careerSources": [
+        {
+          "id": "binance-lever",
+          "provider": "lever",
+          "boardToken": "binance",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "private-proton",
+      "displayName": "Proton",
+      "nameZh": "Proton",
+      "aliases": ["Proton AG", "Proton"],
+      "market": "private",
+      "stockCode": null,
+      "industryGroup": "軟體／AI／資安",
+      "segment": "隱私／資安",
+      "priority": "focus",
+      "careersUrl": "https://job-boards.greenhouse.io/proton",
+      "careerSources": [
+        {
+          "id": "proton-greenhouse",
+          "provider": "greenhouse",
+          "boardToken": "proton",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "twse-2207",
+      "displayName": "Hotai Motor",
+      "nameZh": "和泰車",
+      "aliases": ["和泰汽車", "Hotai Motor"],
+      "market": "TWSE",
+      "stockCode": "2207",
+      "industryGroup": "製造／交通／零售",
+      "segment": "汽車／移動服務",
+      "priority": "diversity",
+      "careersUrl": "https://www.hotaimotor.com.tw/career",
+      "careerSources": []
+    },
+    {
+      "id": "private-pxmart",
+      "displayName": "PX Mart",
+      "nameZh": "全聯",
+      "aliases": ["全聯福利中心", "全聯實業", "PX Mart"],
+      "market": "private",
+      "stockCode": null,
+      "industryGroup": "製造／交通／零售",
+      "segment": "零售",
+      "priority": "diversity",
+      "careersUrl": "https://www.pxmart.com.tw/careers",
+      "careerSources": []
+    }
+  ]
+}

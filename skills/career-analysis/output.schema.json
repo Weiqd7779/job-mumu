@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CareerAnalysisOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "summary",
+    "facts",
+    "inferences",
+    "community_signals",
+    "recommendations",
+    "limitations",
+    "citations",
+    "confidence",
+    "skill_version",
+    "model_id"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600,
+      "pattern": "^[^%％]*$"
+    },
+    "facts": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": { "$ref": "#/$defs/factEvidenceItem" }
+    },
+    "inferences": {
+      "type": "array",
+      "maxItems": 3,
+      "items": { "$ref": "#/$defs/inferenceEvidenceItem" }
+    },
+    "community_signals": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/communityEvidenceItem"
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["priority", "title", "reason", "evidence_ids"],
+        "properties": {
+          "priority": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string", "maxLength": 160 },
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "pattern": "^[^%％]*$"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "maxItems": 6,
+      "items": { "type": "string", "maxLength": 500 }
+    },
+    "citations": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "source", "url", "published_at"],
+        "properties": {
+          "id": { "type": "string" },
+          "source": { "type": "string" },
+          "url": { "type": "string" },
+          "published_at": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "skill_version": { "type": "string" },
+    "model_id": { "type": "string" }
+  },
+  "$defs": {
+    "factEvidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "text", "evidence_ids", "confidence"],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": { "enum": ["fact"] },
+        "text": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "confidence": { "enum": ["high", "medium", "low"] }
+      }
+    },
+    "inferenceEvidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "text", "evidence_ids", "confidence"],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": { "enum": ["inference"] },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "pattern": "^[^%％]*$"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "confidence": { "enum": ["high", "medium", "low"] }
+      }
+    },
+    "communityEvidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "text",
+        "evidence_ids",
+        "confidence",
+        "discussion_count",
+        "source_count",
+        "firsthand_count",
+        "scope"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": { "enum": ["community_signal"] },
+        "text": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "confidence": { "enum": ["high", "medium", "low"] },
+        "discussion_count": { "type": "integer", "minimum": 0 },
+        "source_count": { "type": "integer", "minimum": 0 },
+        "firsthand_count": { "type": "integer", "minimum": 0 },
+        "scope": {
+          "enum": ["role_general", "company_specific", "insufficient"]
+        }
+      }
+    }
+  }
+}
